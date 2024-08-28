@@ -13,7 +13,7 @@ router.get('/fetchallnotes', fetchUser, async (req, res) => {
     res.json(notes);
   } catch(err) {
     console.log(err);
-    res.status(400),json({error: 'Internal Server Error'});
+    res.status(400).json({ error: 'Internal Server Error' });
   }
 })
 
@@ -43,7 +43,7 @@ router.post('/addnote', [
 
   } catch(err) {
     console.log(err);
-    res.status(400),json({error: 'Internal Server Error'});
+    res.status(400).json({error: 'Internal Server Error'});
   }
 
 });
@@ -77,7 +77,7 @@ router.put('/updatenote/:id', fetchUser, async (req, res) => {
 
   } catch(err) {
     console.log(err);
-    res.status(400),json({error: 'Internal Server Error'});
+    res.status(400).json({error: 'Internal Server Error'});
   }
 
 })
@@ -104,7 +104,7 @@ router.delete('/deletenote/:id', fetchUser, async (req, res) => {
 
   } catch(err) {
     console.log(err);
-    res.status(400),json({error: 'Internal Server Error'});
+    res.status(400).json({error: 'Internal Server Error'});
   }
 
 })
